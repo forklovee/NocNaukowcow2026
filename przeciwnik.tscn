@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dfu3iiprrav8t"]
+
+[ext_resource type="Texture2D" uid="uid://7fx4i125vqa2" path="res://Tekstury/Przeciwnik/pig.png" id="1_3pd5d"]
+[ext_resource type="Script" uid="uid://gdhipcf1iwxv" path="res://przeszkoda.gd" id="1_xinq7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b6lhr"]
+radius = 23.0
+
+[node name="Przeciwnik" type="RigidBody2D" unique_id=1662833116]
+contact_monitor = true
+max_contacts_reported = 12
+script = ExtResource("1_xinq7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=754405805]
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_3pd5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=51515053]
+shape = SubResource("CircleShape2D_b6lhr")
