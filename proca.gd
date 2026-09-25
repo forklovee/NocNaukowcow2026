@@ -4,6 +4,7 @@ extends Node2D
 @onready var spawnpoint := $Spawnpoint
 
 var przycisk_wciśnięty := false
+var wektor_strzału: Vector2
 
 var ptak: RigidBody2D
 
@@ -26,7 +27,8 @@ func _input(event: InputEvent) -> void:
 			var pozycja_myszy: Vector2 = spawnpoint.get_local_mouse_position()
 			var kierunek_do_myszy := pozycja_myszy.normalized()
 			var odległość_do_myszy := clampf(pozycja_myszy.length(), 0.0, 100.0)
-			ptak.position = kierunek_do_myszy * odległość_do_myszy
+			wektor_strzału = kierunek_do_myszy * odległość_do_myszy
+			ptak.position = wektor_strzału
 		else:
 			ptak.position = Vector2.ZERO
 

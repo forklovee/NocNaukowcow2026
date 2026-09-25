@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://qsjb3g6ge7rd" path="res://Tekstury/Tło/backgroundEmpty.png" id="1_5tgxs"]
 [ext_resource type="Texture2D" uid="uid://4w06gu6qa4hb" path="res://Tekstury/Teren/platformPack_tile018.png" id="2_vppxe"]
 [ext_resource type="Script" uid="uid://b3vt8vm26t37o" path="res://proca.gd" id="3_1p6ht"]
-[ext_resource type="Texture2D" uid="uid://jtm08h6qhtjd" path="res://icon.svg" id="4_ypajl"]
+[ext_resource type="Texture2D" uid="uid://daju3kck0blc3" path="res://Tekstury/Proca/proca.png" id="4_1p6ht"]
 [ext_resource type="PackedScene" uid="uid://dfu3iiprrav8t" path="res://przeciwnik.tscn" id="5_vppxe"]
 [ext_resource type="PackedScene" uid="uid://dscvpiq10xmge" path="res://skrzynka.tscn" id="6_1p6ht"]
 
@@ -35,11 +35,10 @@ script = ExtResource("3_1p6ht")
 
 [node name="Sprite2D" type="Sprite2D" parent="Proca" unique_id=96845296]
 position = Vector2(0, -75)
-scale = Vector2(0.27999997, 1.4)
-texture = ExtResource("4_ypajl")
+texture = ExtResource("4_1p6ht")
 
 [node name="Spawnpoint" type="Marker2D" parent="Proca" unique_id=1804890220]
-position = Vector2(0, -137)
+position = Vector2(0, -120)
 
 [node name="Przeciwnik" parent="." unique_id=1662833116 instance=ExtResource("5_vppxe")]
 position = Vector2(761, 487)
